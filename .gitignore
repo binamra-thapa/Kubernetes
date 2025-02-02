@@ -1,1 +1,3 @@
-user-certificates/*
+user-certificates/crt/*
+user-certificates/csr/*
+user-certificates/key/*
