@@ -35,12 +35,12 @@ echo "Setting certificate and key for user ${username}"
 kubectl config set-credentials "${username}" --client-certificate "${usercrt}" --client-key "${userkey}"
 
 echo "Setting context namespace for user ${username}"
-# kubectl config set-context --current --user=${username}
-
-## Used in case different context is required
-kubectl config set-context "${username}-context" --user=${username} --cluster=minikube
 kubectl config set-context --current --user=${username}
-kubectl config use-context "${username}-context"
+
+# ## Used in case different context is required
+# kubectl config set-context "${username}-context" --user=${username} --cluster=minikube
+# kubectl config set-context --current --user=${username}
+# kubectl config use-context "${username}-context"
 
 # kubectl config get-contexts
 
