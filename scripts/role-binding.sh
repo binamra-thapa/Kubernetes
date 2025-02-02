@@ -28,7 +28,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-kubectl config use-context minikube
+kubectl config set-context --current --user minikube
 helm upgrade rolebindings rolebindings/ --set namespace="${ns}",username="${username}"
 
 echo "Setting context namespace for user ${username}"
