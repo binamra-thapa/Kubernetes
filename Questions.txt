@@ -1,0 +1,28 @@
+How does k8s achieve high availability for applications
+what are configmaps and secrets and how are they different 
+difference between deployment set and statefulset
+how does k8s perfom load balancing 
+vpa and hpa difference 
+how are secrets handled securely 
+what is a kubernetes ingress 
+taints and tolerations in k8s 
+readiness and liveliness probe?
+daemonset? 
+kube-proxy? 
+job and a cronjob difference 
+labels and annotations 
+
+difference between ingress and service 
+volumes in k8s 
+kubelet??
+how does k8s handle rolling updates and rollbacks 
+rbac?
+helm ?
+service discovery?
+k8s endpoints?
+admission controller?
+canary deployment?
+hw does k8s manage resource quota
+what is crd ?
+what is etcd 
+how to secure k8s clusterwha
