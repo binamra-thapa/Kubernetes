@@ -8,8 +8,6 @@ helm install <release-name> `<chart-path>`
 ### Details in RBAC-notes.txt
 ./generate-certificate.sh `<username>`; 
 
-
-
 # CreatingHelmReleaseforRoleBinding
 ### This can also be done using ./role-binding.sh <username>
 helm install rolebindings rolebindings/ -set namespace="${ns}",username="${username}"
