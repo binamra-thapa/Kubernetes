@@ -1,3 +1,6 @@
+## Summary 
+Generates certificate for a user, set the user for minikube cluster and updates the rolebindings to allow the user to make changes
+
 # CreateHelmChart
 ```
 helm create <release-name> ; ## Example: helm create kubeclt
