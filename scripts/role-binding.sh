@@ -1,7 +1,7 @@
 #! /bin/bash
 
 ns="test-minikube"
-user_crt_files="/Users/binamra.thapa/Desktop/Desktop-Bottomline/My/Devops/K8s/user-certificates"
+user_crt_files="/Users/binamra.thapa/Desktop/Desktop-Bottomline/My/Devops/K8s/kubernetes-rbac-helm/user-certificates"
 username=$1
 userkey="${user_crt_files}/key/${username}.key"
 usercrt="${user_crt_files}/crt/${username}.crt"
@@ -35,11 +35,14 @@ echo "Setting certificate and key for user ${username}"
 kubectl config set-credentials "${username}" --client-certificate "${usercrt}" --client-key "${userkey}"
 
 echo "Setting context namespace for user ${username}"
-# kubectl config set-context "${username}-context" --user=${username} --cluster=minikube
-kubectl config set-context --current --user=${username}
-# kubectl config use-context "${username}-context"
+# kubectl config set-context --current --user=${username}
 
-kubectl config get-contexts
+## Used in case different context is required
+kubectl config set-context "${username}-context" --user=${username} --cluster=minikube
+kubectl config set-context --current --user=${username}
+kubectl config use-context "${username}-context"
+
+# kubectl config get-contexts
 
 echo "Setting the namespace as ${ns}"
 kubectl config set-context --current --namespace "${ns}"

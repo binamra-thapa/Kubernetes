@@ -4,7 +4,7 @@
 CA_CRT="~/.minikube/ca.crt"
 CA_KEY="~/.minikube/ca.key"
 username=$1
-user_crt_files="/Users/binamra.thapa/Desktop/Desktop-Bottomline/My/Devops/K8s/user-certificates"
+user_crt_files="/Users/binamra.thapa/Desktop/Desktop-Bottomline/My/Devops/K8s/kubernetes-rbac-helm/user-certificates"
 userkey="${user_crt_files}/key/${username}.key"
 usercsr="${user_crt_files}/csr/${username}.csr"
 usercrt="${user_crt_files}/crt/${username}.crt"
