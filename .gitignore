@@ -1,3 +1,1 @@
-*/user-certificates/crt/*.crt
-*/user-certificates/csr/*.csr
-*/user-certificates/key/*.key
+kubernetes-rbac-helm/user-certificates/*
