@@ -1,0 +1,42 @@
+1. Why 
+what problem does Kubernetes solve 
+waht are the issues when operating laarge containerized apps 
+what are the benefits of using k8s 
+
+2. Architecture:
+    Control Plane and worker Nodes, 
+    roles of each, how are they connected, what processes run on them 
+
+3. Core objects in k8s 
+    pod, svc, cm, secret , ing, deployment, statefulsets, ns, volume
+    what is the purpose and relation between each other 
+
+4. Kubernetes Components 
+    control plane: scheduler, controler-manager, etcd, api-server
+    worker node:  kubelet, kube-proxy, container runtime 
+   what does each component do and the role of each component.
+   Understanding the mechanisms behind the cluster: self-healing, desired vs actual, scanning deployments 
+
+5. Access and interact with k8s 
+    learn kubectl and its main commands 
+    creating, modifying, deleting resources, querying the cluster's state and status 
+
+6. k8s manifest files
+    learn syntax of k8s manifest files 
+    declerative way of creating k8s object 
+    how to create and manage these configuration files
+    [deployment, service, stateful set, ]
+
+7. TroubleShooting:
+    kubectl commands for troubleshooting 
+    how to get insights into the cluster 
+    insights of cluster networking, component configuration, etc 
+
+8. Common K8s Misconfiguration 
+
+9. Helm Charts
+    what is helm 
+    what are helm charts 
+    what are they used for 
+    how to create and use helm charts 
+

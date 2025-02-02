@@ -1,0 +1,14 @@
+Generate certificate key 
+openssl genrsa -out testuser.key 2048
+
+Generate csr 
+openssl req -new -key binamra.thapa.key -out binamra.thapa.csr -subj "/CN=binamra.thapa"
+
+Generate crt 
+openssl x509 -req -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -in binamra.thapa.csr -out binamra.thapa.crt
+
+#Create user 
+kubectl config set-credentials binamra.thapa --client-certificate binamra.thapa.crt --client-key binamra.thapa.key
+
+#setcontext 
+kubectl config set-context binamra.thapa-context --user=binamra.thapa --cluster=minikube
