@@ -31,9 +31,6 @@ fi
 kubectl config use-context minikube
 helm upgrade rolebindings rolebindings/ --set namespace="${ns}",username="${username}"
 
-echo "Setting certificate and key for user ${username}"
-kubectl config set-credentials "${username}" --client-certificate "${usercrt}" --client-key "${userkey}"
-
 echo "Setting context namespace for user ${username}"
 kubectl config set-context --current --user=${username}
 

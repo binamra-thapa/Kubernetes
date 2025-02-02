@@ -43,3 +43,6 @@ openssl req -new -key ${userkey} -out ${usercsr} -subj "/CN=${username}"
 echo "Creating user.crt"
 #Getthe certificate signed 
 openssl x509 -req -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -in ${usercsr} -out ${usercrt}
+
+echo "Setting certificate and key for user ${username}"
+kubectl config set-credentials "${username}" --client-certificate "${usercrt}" --client-key "${userkey}"
