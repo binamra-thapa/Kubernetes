@@ -1,0 +1,9 @@
+apiVersion: pmx.bottomline.com/v1alpha1
+kind: CustomCluster
+metadata:
+  labels:
+    app.kubernetes.io/name: crds
+    app.kubernetes.io/managed-by: kustomize
+  name: customcluster-sample
+spec:
+  # TODO(user): Add fields here

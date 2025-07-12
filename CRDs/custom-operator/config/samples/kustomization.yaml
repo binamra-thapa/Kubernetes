@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- pmx_v1alpha1_customcluster.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples
